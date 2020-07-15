@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <!-- first way -->
+     <script src="q2.js"></script>
+</head>
+<body>
+    <h1>Q2</h1><br>  
+  <h1><p><b>write the difference between var, let, const with code examples.</b></p></h1>
+  <h1>Function-scope<br><h1>
+   <h4> function myFn() {<br>
+  var foo = 'peekaboo!';<br>
+  console.log(foo); // 'peekaboo!'<br>
+}<br>
+console.log(foo); // ReferenceError: foo is not defined<br></h4>
+   <p>  Using var, variables are function-scoped because their visibility is limited to the function. When you try to use it outside of the function, you’ll get an error.<br></p>
+
+      <h1>  Block-scope</h1>
+<h4>if (true) {<br>
+  var foo = 'peekaboo!';<br>
+  let bar = 'i see u';<br>
+  const baz = 'baby blue!';<br>
+  console.log(foo); // 'peekaboo!';<br>
+  console.log(bar); // 'i see u';<br>
+  console.log(baz); // 'baby blue!';<br>
+}
+console.log(foo); // 'peekaboo!';<br>
+console.log(bar); // ReferenceError: bar is not defined<br>
+console.log(baz); // ReferenceError: baz is not defined</h4><br>
+      <p>Notice the visibility of foo isn’t limited by the if-statement block. However, both bar and baz are limited in visibility to the block of code.</p>
+      
+      </body>
+    </html>
